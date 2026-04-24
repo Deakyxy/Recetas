@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALALU Recetas Descubre Inspiración Culinaria</title>
+    <meta name="description"
+        content="Explora recetas deliciosas paso a paso. Desde entradas hasta postres, encuentra la receta perfecta para cada ocasión en ALALU Recetas.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar-wrapper" id="inicio">
+        <nav class="container-fluid px-4 py-2 d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-3">
+                <img src="./img/Logo recetas.png" alt="Logo ALALU" class="header-logo">
+            </div>
+            <div class="d-flex gap-2 align-items-center nav-links">
+                <a href="#inicio" class="nav-btn">Inicio</a>
+                <a href="#recetas" class="nav-btn">Recetas</a>
+                <a href="#categorias" class="nav-btn">Categorías</a>
+                <a href="#tips" class="nav-btn">Tips del Chef</a>
+                <a href="#contacto" class="nav-btn">Contacto</a>
+                <a href="#recetas" class="nav-btn nav-btn-primary">
+                    <i class="bi bi-search me-1"></i> Buscar Receta
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-inner">
+                <div class="intro-text">
+                    <span class="badge-tag">🍳 Nueva temporada de recetas</span>
+                    <h1 class="intro-title">Descubre inspiración<br><span class="highlight-text">culinaria</span> paso a
+                        paso</h1>
+                    <p class="intro-desc">Libera tu chef interior con nuestra colección de recetas curadas.
+                        Instrucciones claras, ingredientes accesibles y el sabor que tanto buscas.</p>
+                    <div class="search-bar">
+                        <i class="bi bi-search search-icon"></i>
+                        <input type="text" id="buscador" placeholder="¿Qué quieres cocinar hoy?" class="search-input">
+                        <button class="search-btn" onclick="buscarReceta()">Buscar</button>
+                    </div>
+                    <div class="intro-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">Recetas</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">Categorías</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Fans</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-img-col">
+                    <div class="intro-img-wrapper">
+                        <img src="./img/61c65ad5-7e93-44d8-9559-f459c480df1d.webp" alt="Plato delicioso"
+                            class="intro-img">
+                        <div class="floating-card card-top">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <div>
+                                <strong>4.9</strong>
+                                <small>Mejor valorada</small>
+                            </div>
+                        </div>
+                        <div class="floating-card card-bottom">
+                            <i class="bi bi-clock text-danger"></i>
+                            <div>
+                                <strong>30 min</strong>
+                                <small>Tiempo promedio</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="categorias" class="section-pad bg-white">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Explora</span>
+                <h2 class="section-title">Categorías Populares</h2>
+                <p class="section-sub">Elige tu categoría favorita y encuentra la receta perfecta</p>
+            </div>
+            <div class="row g-3 justify-content-center">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="cat-card" onclick="filtrarCategoria('Hamburguesas')">
+                        <div class="cat-icon">🍔</div>
+                        <span>Hamburguesas</span>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="cat-card" onclick="filtrarCategoria('Pastas')">
+                        <div class="cat-icon">🍝</div>
+                        <span>Pastas</span>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="cat-card" onclick="filtrarCategoria('Postres')">
+                        <div class="cat-icon">🍰</div>
+                        <span>Postres</span>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="cat-card" onclick="filtrarCategoria('Ensaladas')">
+                        <div class="cat-icon">🥗</div>
+                        <span>Ensaladas</span>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="cat-card" onclick="filtrarCategoria('Sopas')">
+                        <div class="cat-icon">🍲</div>
+                        <span>Sopas</span>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="cat-card" onclick="filtrarCategoria('Mexicana')">
+                        <div class="cat-icon">🌮</div>
+                        <span>Mexicana</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recetas" class="section-pad bg-cream">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Destacadas</span>
+                <h2 class="section-title">Recetas del Momento</h2>
+                <p class="section-sub">Las recetas más amadas por nuestra comunidad esta semana</p>
+            </div>
+
+            <div class="filter-bar mb-2">
+                <button class="filter-btn active" onclick="setFilter(this,'todas','cat')">Todas</button>
+                <button class="filter-btn" onclick="setFilter(this,'Hamburguesas','cat')">🍔 Hamburguesas</button>
+                <button class="filter-btn" onclick="setFilter(this,'Pastas','cat')">🍝 Pastas</button>
+                <button class="filter-btn" onclick="setFilter(this,'Postres','cat')">🍰 Postres</button>
+                <button class="filter-btn" onclick="setFilter(this,'Ensaladas','cat')">🥗 Ensaladas</button>
+                <button class="filter-btn" onclick="setFilter(this,'Sopas','cat')">🍲 Sopas</button>
+                <button class="filter-btn" onclick="setFilter(this,'Mexicana','cat')">🌮 Mexicana</button>
+            </div>
+            <div class="filter-bar mb-5">
+                <button class="filter-tag-btn" onclick="setFilter(this,'rapida','tag')">⚡ Rápidas (&lt;30 min)</button>
+                <button class="filter-tag-btn" onclick="setFilter(this,'facil','tag')">😊 Fáciles</button>
+                <button class="filter-tag-btn" onclick="setFilter(this,'vegetariana','tag')">🌱 Vegetarianas</button>
+                <button class="filter-tag-btn" onclick="setFilter(this,'sin-gluten','tag')">🌾 Sin Gluten</button>
+            </div>
+
+            <p id="recetas-count" class="recetas-count mb-4"></p>
+
+            <div class="row g-4" id="recetas-grid">
+
+                <div class="col-12 col-sm-6 col-lg-4 recipe-item" data-cat="Hamburguesas" data-tags="rapida,facil">
+                    <div class="recipe-card">
+                        <div class="recipe-img-wrap">
+                            <img src="./img/61c65ad5-7e93-44d8-9559-f459c480df1d.webp" alt="Hamburguesa Clásica ALALU"
+                                class="recipe-img">
+                            <span class="recipe-badge badge-popular">🔥 Popular</span>
+                            <button class="btn-fav"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <div class="recipe-body">
+                            <div class="recipe-meta">
+                                <span class="meta-item"><i class="bi bi-clock"></i> 30 min</span>
+                                <span class="meta-item"><i class="bi bi-people"></i> 2 porciones</span>
+                                <span class="difficulty easy">Fácil</span>
+                            </div>
+                            <div class="cat-label">🍔 Hamburguesas</div>
+                            <h3 class="recipe-name">Hamburguesa Clásica ALALU</h3>
+                            <p class="recipe-desc">Carne jugosa 80/20, queso cheddar derretido y la inconfundible salsa
+                                secreta ALALU en pan brioche tostado.</p>
+                            <div class="recipe-footer">
+                                <div class="recipe-rating"><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><span>4.8
+                                        (203)</span></div>
+                                <a href="receta-hamburguesa.html" class="btn-ver">Ver Receta <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 recipe-item" data-cat="Hamburguesas" data-tags="facil">
+                    <div class="recipe-card">
+                        <div class="recipe-img-wrap recipe-img-placeholder"
+                            style="background:linear-gradient(135deg,#3d1c00,#7a3900);">
+                            <div class="placeholder-emoji">🍔</div>
+                            <span class="recipe-badge badge-new">✨ Nuevo</span>
+                            <button class="btn-fav"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <div class="recipe-body">
+                            <div class="recipe-meta">
+                                <span class="meta-item"><i class="bi bi-clock"></i> 40 min</span>
+                                <span class="meta-item"><i class="bi bi-people"></i> 2 porciones</span>
+                                <span class="difficulty easy">Fácil</span>
+                            </div>
+                            <div class="cat-label">🍔 Hamburguesas</div>
+                            <h3 class="recipe-name">Hamburguesa BBQ Doble</h3>
+                            <p class="recipe-desc">Doble carne ahumada al carbón, salsa BBQ casera, cebolla caramelizada
+                                y jalapeños encurtidos.</p>
+                            <div class="recipe-footer">
+                                <div class="recipe-rating"><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><span>4.9 (87)</span>
+                                </div>
+                                <a href="receta-hamburguesa.html" class="btn-ver">Ver Receta <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 recipe-item" data-cat="Mexicana" data-tags="">
+                    <div class="recipe-card">
+                        <div class="recipe-img-wrap">
+                            <img src="./img/ConvertOut-Resized-Pastel_Azteca_1_Klein_Sep24_2000x.webp"
+                                alt="Pastel Azteca Tradicional" class="recipe-img">
+                            <span class="recipe-badge badge-trending">⭐ Destacada</span>
+                            <button class="btn-fav"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <div class="recipe-body">
+                            <div class="recipe-meta">
+                                <span class="meta-item"><i class="bi bi-clock"></i> 60 min</span>
+                                <span class="meta-item"><i class="bi bi-people"></i> 6 porciones</span>
+                                <span class="difficulty medium">Medio</span>
+                            </div>
+                            <div class="cat-label">🌮 Mexicana</div>
+                            <h3 class="recipe-name">Pastel Azteca Tradicional</h3>
+                            <p class="recipe-desc">Capas de tortillas, pollo deshebrado, rajas de chile poblano, crema y
+                                queso Oaxaca gratinado.</p>
+                            <div class="recipe-footer">
+                                <div class="recipe-rating"><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><span>5.0
+                                        (142)</span></div>
+                                <a href="receta-pastel-azteca.html" class="btn-ver">Ver Receta <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 recipe-item" data-cat="Mexicana" data-tags="">
+                    <div class="recipe-card">
+                        <div class="recipe-img-wrap recipe-img-placeholder"
+                            style="background:linear-gradient(135deg,#8b3a00,#cc5500);">
+                            <div class="placeholder-emoji">🌮</div>
+                            <span class="recipe-badge badge-popular">🔥 Popular</span>
+                            <button class="btn-fav"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <div class="recipe-body">
+                            <div class="recipe-meta">
+                                <span class="meta-item"><i class="bi bi-clock"></i> 2h</span>
+                                <span class="meta-item"><i class="bi bi-people"></i> 6 porciones</span>
+                                <span class="difficulty medium">Medio</span>
+                            </div>
+                            <div class="cat-label">🌮 Mexicana</div>
+                            <h3 class="recipe-name">Tacos al Pastor Auténticos</h3>
+                            <p class="recipe-desc">Cerdo marinado en adobo de chile con achiote, piña caramelizada,
+                                cilantro y salsa verde.</p>
+                            <div class="recipe-footer">
+                                <div class="recipe-rating"><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><span>4.9
+                                        (422)</span></div>
+                                <a href="receta-tacos-pastor.html" class="btn-ver">Ver Receta <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 recipe-item" data-cat="Pastas" data-tags="rapida,facil">
+                    <div class="recipe-card">
+                        <div class="recipe-img-wrap recipe-img-placeholder"
+                            style="background:linear-gradient(135deg,#fff8e1,#ffe0b2);">
+                            <div class="placeholder-emoji">🍝</div>
+                            <span class="recipe-badge badge-new">✨ Nuevo</span>
+                            <button class="btn-fav"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <div class="recipe-body">
+                            <div class="recipe-meta">
+                                <span class="meta-item"><i class="bi bi-clock"></i> 20 min</span>
+                                <span class="meta-item"><i class="bi bi-people"></i> 4 porciones</span>
+                                <span class="difficulty easy">Fácil</span>
+                            </div>
+                            <div class="cat-label">🍝 Pastas</div>
+                            <h3 class="recipe-name">Pasta Carbonara Express</h3>
+                            <p class="recipe-desc">Auténtica Carbonara romana sin crema: yemas de huevo emulsionadas con
+                                Pecorino, panceta crujiente y pimienta.</p>
+                            <div class="recipe-footer">
+                                <div class="recipe-rating"><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><span>4.7
+                                        (186)</span></div>
+                                <a href="receta-pasta-carbonara.html" class="btn-ver">Ver Receta <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 recipe-item" data-cat="Pastas" data-tags="rapida,vegetariana">
+                    <div class="recipe-card">
+                        <div class="recipe-img-wrap recipe-img-placeholder"
+                            style="background:linear-gradient(135deg,#7a0000,#c41200);">
+                            <div class="placeholder-emoji">🍅</div>
+                            <button class="btn-fav"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <div class="recipe-body">
+                            <div class="recipe-meta">
+                                <span class="meta-item"><i class="bi bi-clock"></i> 25 min</span>
+                                <span class="meta-item"><i class="bi bi-people"></i> 3 porciones</span>
+                                <span class="difficulty easy">Fácil</span>
+                            </div>
+                            <div class="cat-label">🍝 Pastas</div>
+                            <h3 class="recipe-name">Penne all'Arrabbiata</h3>
+                            <p class="recipe-desc">Salsa de tomate picante con ajo, chile de árbol y albahaca fresca.
+                                Sencilla, poderosa y vegetariana.</p>
+                            <div class="recipe-footer">
+                                <div class="recipe-rating"><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star"></i><span>4.5 (91)</span>
+                                </div>
+                                <a href="receta-penne.html" class="btn-ver">Ver Receta <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 recipe-item" data-cat="Postres" data-tags="facil,vegetariana">
+                    <div class="recipe-card">
+                        <div class="recipe-img-wrap recipe-img-placeholder"
+                            style="background:linear-gradient(135deg,#3e1f00,#6b3300);">
+                            <div class="placeholder-emoji">🍫</div>
+                            <span class="recipe-badge badge-trending">❤️ Favorita</span>
+                            <button class="btn-fav"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <div class="recipe-body">
+                            <div class="recipe-meta">
+                                <span class="meta-item"><i class="bi bi-clock"></i> 35 min</span>
+                                <span class="meta-item"><i class="bi bi-people"></i> 12 porciones</span>
+                                <span class="difficulty easy">Fácil</span>
+                            </div>
+                            <div class="cat-label">🍰 Postres</div>
+                            <h3 class="recipe-name">Brownie de Chocolate Intenso</h3>
+                            <p class="recipe-desc">Textura fudgy por dentro, costra crujiente por fuera. Elaborado con
+                                chocolate 70% cacao de alta calidad.</p>
+                            <div class="recipe-footer">
+                                <div class="recipe-rating"><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><span>4.9
+                                        (312)</span></div>
+                                <a href="receta-brownie.html" class="btn-ver">Ver Receta <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 recipe-item" data-cat="Postres" data-tags="vegetariana,sin-gluten">
+                    <div class="recipe-card">
+                        <div class="recipe-img-wrap recipe-img-placeholder"
+                            style="background:linear-gradient(135deg,#8b6914,#c8960a);">
+                            <div class="placeholder-emoji">🍮</div>
+                            <button class="btn-fav"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <div class="recipe-body">
+                            <div class="recipe-meta">
+                                <span class="meta-item"><i class="bi bi-clock"></i> 70 min</span>
+                                <span class="meta-item"><i class="bi bi-people"></i> 8 porciones</span>
+                                <span class="difficulty medium">Medio</span>
+                            </div>
+                            <div class="cat-label">🍰 Postres</div>
+                            <h3 class="recipe-name">Flan Napolitano Clásico</h3>
+                            <p class="recipe-desc">El flan más cremoso con caramelo dorado. Elaborado al baño maría con
+                                queso crema para una textura perfecta.</p>
+                            <div class="recipe-footer">
+                                <div class="recipe-rating"><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><span>4.8
+                                        (198)</span></div>
+                                <a href="receta-flan.html" class="btn-ver">Ver Receta <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 recipe-item" data-cat="Ensaladas" data-tags="rapida,facil">
+                    <div class="recipe-card">
+                        <div class="recipe-img-wrap recipe-img-placeholder"
+                            style="background:linear-gradient(135deg,#1a3a1a,#2d5a2d);">
+                            <div class="placeholder-emoji">🥗</div>
+                            <span class="recipe-badge badge-new">🌟 Estrella</span>
+                            <button class="btn-fav"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <div class="recipe-body">
+                            <div class="recipe-meta">
+                                <span class="meta-item"><i class="bi bi-clock"></i> 15 min</span>
+                                <span class="meta-item"><i class="bi bi-people"></i> 2 porciones</span>
+                                <span class="difficulty easy">Fácil</span>
+                            </div>
+                            <div class="cat-label">🥗 Ensaladas</div>
+                            <h3 class="recipe-name">Ensalada César con Crutones</h3>
+                            <p class="recipe-desc">Lechuga romana, aderezo César casero emulsionado, crutones dorados al
+                                ajo y virutas de Parmesano.</p>
+                            <div class="recipe-footer">
+                                <div class="recipe-rating"><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><span>4.6 (98)</span>
+                                </div>
+                                <a href="receta-ensalada-cesar.html" class="btn-ver">Ver Receta <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 recipe-item recipe-extra" data-cat="Ensaladas"
+                    data-tags="vegetariana,sin-gluten,rapida">
+                    <div class="recipe-card">
+                        <div class="recipe-img-wrap recipe-img-placeholder"
+                            style="background:linear-gradient(135deg,#4a0030,#9c0066);">
+                            <div class="placeholder-emoji">🥀</div>
+                            <button class="btn-fav"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <div class="recipe-body">
+                            <div class="recipe-meta">
+                                <span class="meta-item"><i class="bi bi-clock"></i> 20 min</span>
+                                <span class="meta-item"><i class="bi bi-people"></i> 4 porciones</span>
+                                <span class="difficulty easy">Fácil</span>
+                            </div>
+                            <div class="cat-label">🥗 Ensaladas</div>
+                            <h3 class="recipe-name">Ensalada de Betabel y Queso de Cabra</h3>
+                            <p class="recipe-desc">Betabel rostizado, queso de cabra cremoso, nueces tostadas y aderezo
+                                de miel-mostaza. Colorida y deliciosa.</p>
+                            <div class="recipe-footer">
+                                <div class="recipe-rating"><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star"></i><span>4.4 (62)</span>
+                                </div>
+                                <a href="receta-ensalada-betabel.html" class="btn-ver">Ver Receta <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 recipe-item recipe-extra" data-cat="Sopas" data-tags="sin-gluten">
+                    <div class="recipe-card">
+                        <div class="recipe-img-wrap recipe-img-placeholder"
+                            style="background:linear-gradient(135deg,#8b0000,#c41230);">
+                            <div class="placeholder-emoji">🍲</div>
+                            <span class="recipe-badge badge-popular">🔥 Popular</span>
+                            <button class="btn-fav"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <div class="recipe-body">
+                            <div class="recipe-meta">
+                                <span class="meta-item"><i class="bi bi-clock"></i> 90 min</span>
+                                <span class="meta-item"><i class="bi bi-people"></i> 8 porciones</span>
+                                <span class="difficulty medium">Medio</span>
+                            </div>
+                            <div class="cat-label">🍲 Sopas</div>
+                            <h3 class="recipe-name">Pozole Rojo Tradicional</h3>
+                            <p class="recipe-desc">Mole de chiles guajillo y ancho con maíz cacahuazintle y cerdo
+                                deshebrado. Con toda la guarnición tradicional.</p>
+                            <div class="recipe-footer">
+                                <div class="recipe-rating"><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><span>4.9
+                                        (254)</span></div>
+                                <a href="receta-pozole.html" class="btn-ver">Ver Receta <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 recipe-item recipe-extra" data-cat="Sopas"
+                    data-tags="vegetariana,sin-gluten,facil">
+                    <div class="recipe-card">
+                        <div class="recipe-img-wrap recipe-img-placeholder"
+                            style="background:linear-gradient(135deg,#8b4500,#e87200);">
+                            <div class="placeholder-emoji">🎃</div>
+                            <button class="btn-fav"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <div class="recipe-body">
+                            <div class="recipe-meta">
+                                <span class="meta-item"><i class="bi bi-clock"></i> 45 min</span>
+                                <span class="meta-item"><i class="bi bi-people"></i> 4 porciones</span>
+                                <span class="difficulty easy">Fácil</span>
+                            </div>
+                            <div class="cat-label">🍲 Sopas</div>
+                            <h3 class="recipe-name">Crema de Calabaza Asada</h3>
+                            <p class="recipe-desc">Calabaza de castilla rostizada con jengibre, canela y leche de coco.
+                                Vegetariana, sin gluten y reconfortante.</p>
+                            <div class="recipe-footer">
+                                <div class="recipe-rating"><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><span>4.7
+                                        (113)</span></div>
+                                <a href="receta-crema-calabaza.html" class="btn-ver">Ver Receta <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="no-resultados" class="no-results-msg" style="display:none;">
+                <div class="no-results-emoji">🤔</div>
+                <h4>No encontramos recetas con ese filtro</h4>
+                <p>Prueba con otra categoría o quita algún filtro.</p>
+                <button class="btn-load-more mt-3" onclick="resetFiltros()">Ver todas las recetas</button>
+            </div>
+
+            <div class="text-center mt-5" id="btn-ver-todas-wrap">
+                <button class="btn-load-more" id="btn-ver-todas" onclick="verTodasRecetas()">
+                    Ver todas las recetas <i class="bi bi-grid ms-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="tips" class="section-pad bg-dark-warm">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-badge light">Chef ALALU</span>
+                <h2 class="section-title light">Tips Profesionales</h2>
+                <p class="section-sub light">Secretos de cocina para elevar tus platillos al siguiente nivel</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="tip-card">
+                        <div class="tip-icon">🔪</div>
+                        <h4>Técnica de Corte</h4>
+                        <p>Mantén siempre tus cuchillos afilados. Un cuchillo bien afilado es más seguro y produce
+                            cortes precisos.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="tip-card">
+                        <div class="tip-icon">🌡️</div>
+                        <h4>Control de Temperatura</h4>
+                        <p>La carne de res alcanza su punto ideal a 57°C. Usa un termómetro de cocina para resultados
+                            perfectos.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="tip-card">
+                        <div class="tip-icon">🧂</div>
+                        <h4>Sazón al Momento</h4>
+                        <p>Sazona en capas durante la cocción. Agregar sal al final solo tapa el sabor, no lo integra.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="tip-card">
+                        <div class="tip-icon">⏱️</div>
+                        <h4>Mise en Place</h4>
+                        <p>Prepara y mide todos los ingredientes antes de comenzar. Cocinar fluye mejor cuando todo está
+                            listo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad bg-white">
+        <div class="container">
+            <div class="newsletter-box">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6 mb-4 mb-md-0">
+                        <span class="section-badge">Newsletter</span>
+                        <h2 class="newsletter-title">¿No quieres perderte nada?</h2>
+                        <p class="newsletter-sub">Recibe las mejores recetas de la semana directo a tu correo. Sin spam,
+                            solo sabor.</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="newsletter-form">
+                            <input type="email" id="emailNewsletter" placeholder="tu@correo.com"
+                                class="newsletter-input">
+                            <button class="newsletter-btn" onclick="suscribir()">
+                                <i class="bi bi-envelope-check me-2"></i>Suscribirme
+                            </button>
+                        </div>
+                        <p id="msg-newsletter" class="newsletter-msg"></p>
+                        <small class="text-muted">Puedes darte de baja cuando quieras. 🔒 Tu privacidad es
+                            importante.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="footer-section">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-12 col-md-4">
+                    <img src="./img/Logo recetas.png" alt="Logo ALALU" class="footer-logo mb-3">
+                    <p class="footer-desc">Tu destino culinario favorito. Recetas auténticas, fáciles de seguir y llenas
+                        de sabor para cada ocasión.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-btn" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-btn" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="social-btn" title="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h5 class="footer-heading">Recetas</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Más Populares</a></li>
+                        <li><a href="#">Nuevas</a></li>
+                        <li><a href="#">Vegetarianas</a></li>
+                        <li><a href="#">Postres</a></li>
+                        <li><a href="#">Bebidas</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h5 class="footer-heading">Categorías</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Desayunos</a></li>
+                        <li><a href="#">Comidas</a></li>
+                        <li><a href="#">Cenas</a></li>
+                        <li><a href="#">Snacks</a></li>
+                        <li><a href="#">Bebidas</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h5 class="footer-heading">Contacto</h5>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-geo-alt"></i> México, CDMX</li>
+                        <li><i class="bi bi-envelope"></i> hola@alalu.mx</li>
+                        <li><i class="bi bi-telephone"></i> +52 55 1234 5678</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 ALALU Recetas. Todos los derechos reservados. Hecho con ❤️ en México.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacidad</a>
+                    <a href="#">Términos</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let activeCat = 'todas';
+        let activeTag = null;
+        let mostrandoTodas = false;
+
+        document.querySelectorAll('.recipe-extra').forEach(el => el.style.display = 'none');
+        actualizarContador();
+
+        function setFilter(btn, valor, tipo) {
+            if (tipo === 'cat') {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                activeCat = valor;
+            } else if (tipo === 'tag') {
+                if (activeTag === valor) {
+                    activeTag = null;
+                    btn.classList.remove('active');
+                } else {
+                    document.querySelectorAll('.filter-tag-btn').forEach(b => b.classList.remove('active'));
+                    activeTag = valor;
+                    btn.classList.add('active');
+                }
+            }
+            aplicarFiltros();
+        }
+
+        function aplicarFiltros() {
+            const items = document.querySelectorAll('.recipe-item');
+            let visibles = 0;
+
+            items.forEach(item => {
+                const cat = item.dataset.cat;
+                const tags = item.dataset.tags || '';
+                const esExtra = item.classList.contains('recipe-extra');
+
+                const pasaCat = activeCat === 'todas' || cat === activeCat;
+                const pasaTag = !activeTag || tags.includes(activeTag);
+                const visible = pasaCat && pasaTag && (!esExtra || mostrandoTodas);
+
+                item.style.display = visible ? '' : 'none';
+                if (visible) visibles++;
+            });
+
+            const noRes = document.getElementById('no-resultados');
+            noRes.style.display = visibles === 0 ? 'block' : 'none';
+
+            const btnWrap = document.getElementById('btn-ver-todas-wrap');
+            const hayExtras = checaExtrasCoincidentes();
+            btnWrap.style.display = (visibles > 0 && !mostrandoTodas && hayExtras) ? 'block' : 'none';
+
+            actualizarContador(visibles);
+        }
+
+        function checaExtrasCoincidentes() {
+            let hay = false;
+            document.querySelectorAll('.recipe-item.recipe-extra').forEach(item => {
+                const cat = item.dataset.cat;
+                const tags = item.dataset.tags || '';
+                const pasaCat = activeCat === 'todas' || cat === activeCat;
+                const pasaTag = !activeTag || tags.includes(activeTag);
+                if (pasaCat && pasaTag) hay = true;
+            });
+            return hay;
+        }
+
+        function verTodasRecetas() {
+            mostrandoTodas = true;
+            document.querySelectorAll('.recipe-extra').forEach(el => el.style.display = '');
+            document.getElementById('btn-ver-todas-wrap').style.display = 'none';
+            aplicarFiltros();
+        }
+
+        function resetFiltros() {
+            activeCat = 'todas';
+            activeTag = null;
+            mostrandoTodas = false;
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector('.filter-btn').classList.add('active');
+            document.querySelectorAll('.filter-tag-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.recipe-extra').forEach(el => el.style.display = 'none');
+            aplicarFiltros();
+        }
+
+        function actualizarContador(n) {
+            const el = document.getElementById('recetas-count');
+            if (!el) return;
+            const total = n !== undefined ? n : document.querySelectorAll('.recipe-item:not(.recipe-extra)').length;
+            el.textContent = `Mostrando ${total} receta${total !== 1 ? 's' : ''}`;
+        }
+
+        function filtrarCategoria(cat) {
+            activeCat = cat;
+            activeTag = null;
+            mostrandoTodas = false;
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                b.classList.toggle('active', b.textContent.includes(cat));
+            });
+            document.querySelectorAll('.filter-tag-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.recipe-extra').forEach(el => el.style.display = 'none');
+            aplicarFiltros();
+            document.getElementById('recetas').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function buscarReceta() {
+            const q = document.getElementById('buscador').value.trim().toLowerCase();
+            if (!q) return;
+            let encontradas = 0;
+            document.querySelectorAll('.recipe-item').forEach(item => {
+                const nombre = item.querySelector('.recipe-name')?.textContent.toLowerCase() || '';
+                const desc = item.querySelector('.recipe-desc')?.textContent.toLowerCase() || '';
+                const match = nombre.includes(q) || desc.includes(q);
+                item.style.display = match ? '' : 'none';
+                if (match) encontradas++;
+            });
+            mostrandoTodas = true;
+            document.getElementById('btn-ver-todas-wrap').style.display = 'none';
+            document.getElementById('no-resultados').style.display = encontradas === 0 ? 'block' : 'none';
+            actualizarContador(encontradas);
+            document.getElementById('recetas').scrollIntoView({ behavior: 'smooth' });
+        }
+        document.getElementById('buscador').addEventListener('keydown', e => { if (e.key === 'Enter') buscarReceta(); });
+
+        document.querySelectorAll('.btn-fav').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                this.classList.toggle('active');
+                const icon = this.querySelector('i');
+                icon.classList.toggle('bi-heart');
+                icon.classList.toggle('bi-heart-fill');
+            });
+        });
+
+        function suscribir() {
+            const email = document.getElementById('emailNewsletter').value;
+            const msg = document.getElementById('msg-newsletter');
+            if (!email || !email.includes('@')) {
+                msg.textContent = '⚠️ Por favor ingresa un correo válido.';
+                msg.style.color = '#e74c3c';
+            } else {
+                msg.textContent = '✅ ¡Gracias! Ya estás suscrito a nuestras recetas.';
+                msg.style.color = '#27ae60';
+                document.getElementById('emailNewsletter').value = '';
+            }
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar-wrapper').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+
+</html>

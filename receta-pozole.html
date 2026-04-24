@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pozole Rojo Tradicional – ALALU Recetas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="receta.css">
+</head>
+<body>
+    <header class="navbar-wrapper">
+        <nav class="container-fluid px-4 py-2 d-flex align-items-center justify-content-between">
+            <a href="hamburguesa.html"><img src="./img/Logo recetas.png" alt="Logo ALALU" class="header-logo"></a>
+            <div class="d-flex gap-2 nav-links"><a href="hamburguesa.html" class="nav-btn">Inicio</a><a href="hamburguesa.html#recetas" class="nav-btn">Recetas</a></div>
+        </nav>
+    </header>
+
+    <section class="recipe-hero">
+        <div class="recipe-hero-img-wrap">
+            <div class="recipe-hero-placeholder" style="background:linear-gradient(135deg,#8b0000,#c41230);">🍲</div>
+            <div class="recipe-hero-overlay"></div>
+        </div>
+        <div class="recipe-hero-content container">
+            <div class="breadcrumb-nav"><a href="hamburguesa.html">Inicio</a><i class="bi bi-chevron-right"></i><a href="hamburguesa.html#categorias">Sopas</a><i class="bi bi-chevron-right"></i><span>Pozole</span></div>
+            <span class="cat-pill">🍲 Sopas</span>
+            <h1 class="recipe-hero-title">Pozole Rojo Tradicional</h1>
+            <p class="recipe-hero-sub">El caldo ceremonial mexicano por excelencia. Maíz cacahuazintle, carne de cerdo y una salsa de chiles guajillo y ancho que llena el alma.</p>
+            <div class="recipe-hero-meta">
+                <div class="meta-pill"><i class="bi bi-clock"></i> 90 min total</div>
+                <div class="meta-pill"><i class="bi bi-people"></i> 8 porciones</div>
+                <div class="meta-pill difficulty-medium"><i class="bi bi-bar-chart"></i> Medio</div>
+                <div class="meta-pill"><i class="bi bi-star-fill text-warning"></i> 4.9 (254 reseñas)</div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container recipe-main">
+        <div class="row g-5">
+            <div class="col-12 col-lg-8">
+                <section class="recipe-section">
+                    <h2 class="section-heading"><i class="bi bi-basket2 me-2"></i>Ingredientes</h2>
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6">
+                            <div class="ingredient-group">
+                                <h5 class="ingredient-group-title">Caldo Base</h5>
+                                <ul class="ingredient-list">
+                                    <li><span class="qty">1 kg</span> lomo o pierna de cerdo</li>
+                                    <li><span class="qty">400 g</span> maíz cacahuazintle precocido</li>
+                                    <li><span class="qty">1</span> cebolla partida a la mitad</li>
+                                    <li><span class="qty">4 dientes</span> de ajo</li>
+                                    <li><span class="qty">2 litros</span> de agua</li>
+                                    <li><span class="qty">Sal</span> al gusto</li>
+                                    <li><span class="qty">2 hojas</span> de laurel</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="ingredient-group">
+                                <h5 class="ingredient-group-title">Salsa Roja de Chiles</h5>
+                                <ul class="ingredient-list">
+                                    <li><span class="qty">5</span> chiles guajillo</li>
+                                    <li><span class="qty">2</span> chiles ancho</li>
+                                    <li><span class="qty">1</span> chile pasilla</li>
+                                    <li><span class="qty">3 dientes</span> de ajo</li>
+                                    <li><span class="qty">½ cebolla</span></li>
+                                    <li><span class="qty">1 cdita</span> orégano mexicano</li>
+                                    <li><span class="qty">Sal y comino</span> al gusto</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <div class="ingredient-group">
+                            <h5 class="ingredient-group-title">Guarniciones (para servir)</h5>
+                            <div class="row">
+                                <div class="col-6"><ul class="ingredient-list">
+                                    <li><span class="qty">1 cabeza</span> lechuga rallada</li>
+                                    <li><span class="qty">2</span> rábanos en rodajas</li>
+                                    <li><span class="qty">1</span> cebolla blanca picada</li>
+                                </ul></div>
+                                <div class="col-6"><ul class="ingredient-list">
+                                    <li><span class="qty">Orégano</span> seco</li>
+                                    <li><span class="qty">Tostadas</span></li>
+                                    <li><span class="qty">Limones</span> en cuartos</li>
+                                    <li><span class="qty">Chile</span> en polvo</li>
+                                </ul></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="recipe-section">
+                    <h2 class="section-heading"><i class="bi bi-list-ol me-2"></i>Preparación</h2>
+                    <div class="step-card"><div class="step-number">1</div><div class="step-body"><h4>Cocina el maíz y la carne</h4><p>En una olla grande coloca el maíz, la carne de cerdo en trozos grandes, la cebolla, ajo y laurel. Cubre con agua, lleva a ebullición y cocina a fuego medio 60-70 min hasta que la carne esté muy suave y el maíz haya "florecido" (abertura visible).</p></div></div>
+                    <div class="step-card"><div class="step-number">2</div><div class="step-body"><h4>Prepara la salsa roja</h4><p>Desveina y remoja los chiles en agua caliente 15 min. Licúa con ajo, cebolla, orégano, comino, sal y un poco del agua de remojo hasta obtener una salsa tersa. Cuela para eliminar pieles y semillas.</p></div></div>
+                    <div class="step-card"><div class="step-number">3</div><div class="step-body"><h4>Fríe y agrega la salsa</h4><p>En una sartén grande con un poco de aceite a fuego alto, fríe la salsa de chiles 5 min moviendo constantemente hasta que oscurezca ligeramente y pierda el sabor a crudo. Agrega al caldo y mezcla bien.</p></div></div>
+                    <div class="step-card"><div class="step-number">4</div><div class="step-body"><h4>Deshebra la carne y cocina</h4><p>Retira la carne del caldo, deja enfriar y deshebra. Devuelve la carne deshebrara al caldo. Cocina 10 min más para integrar sabores. Rectifica sal.</p></div></div>
+                    <div class="step-card highlight-step"><div class="step-number">✓</div><div class="step-body"><h4>¡Sirve con todas las guarniciones!</h4><p>Sirve en tazones hondos bien calientes. Ofrece las guarniciones al centro: lechuga, rábanos, cebolla, orégano, limón, chile en polvo y tostadas. ¡El pozole es tradición!</p></div></div>
+                </section>
+
+                <section class="recipe-section">
+                    <div class="tip-box"><div class="tip-box-icon">👨‍🍳</div><div><h5>Tip del Chef ALALU</h5><p>El maíz cacahuazintle precocido (nixtamalizado) reduce mucho el tiempo de preparación. Si usas maíz seco sin precocer, necesitarás remojarlo toda la noche y cocinarlo 2-3 horas. El sabor del pozole mejora enormemente al día siguiente, ¡es perfecto para preparar un día antes!</p></div></div>
+                </section>
+
+                <section class="recipe-section">
+                    <h2 class="section-heading"><i class="bi bi-pie-chart me-2"></i>Información Nutricional</h2>
+                    <p class="text-muted mb-3"><small>Por porción (sin guarniciones)</small></p>
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item"><span class="nut-value">380</span><span class="nut-label">Calorías</span></div>
+                        <div class="nutrition-item"><span class="nut-value">32g</span><span class="nut-label">Proteína</span></div>
+                        <div class="nutrition-item"><span class="nut-value">28g</span><span class="nut-label">Carbohidratos</span></div>
+                        <div class="nutrition-item"><span class="nut-value">15g</span><span class="nut-label">Grasa</span></div>
+                        <div class="nutrition-item"><span class="nut-value">5g</span><span class="nut-label">Fibra</span></div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="sticky-sidebar">
+                    <div class="sidebar-card">
+                        <h4 class="sidebar-title">Resumen Rápido</h4>
+                        <ul class="summary-list">
+                            <li><i class="bi bi-clock text-warning"></i><span>Tiempo total</span><strong>90 min</strong></li>
+                            <li><i class="bi bi-people text-warning"></i><span>Porciones</span><strong>8 personas</strong></li>
+                            <li><i class="bi bi-bar-chart text-warning"></i><span>Dificultad</span><strong>Medio</strong></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-card">
+                        <h4 class="sidebar-title">Etiquetas</h4>
+                        <div class="tags-wrap"><span class="tag">🍲 Sopa</span><span class="tag">🌮 Mexicana</span><span class="tag">🐷 Cerdo</span><span class="tag">🌶️ Chile</span><span class="tag">🎉 Especial</span></div>
+                    </div>
+                    <div class="sidebar-card">
+                        <h4 class="sidebar-title">¿Te gustó?</h4>
+                        <div class="rating-stars"><i class="bi bi-star rating-star" data-val="1"></i><i class="bi bi-star rating-star" data-val="2"></i><i class="bi bi-star rating-star" data-val="3"></i><i class="bi bi-star rating-star" data-val="4"></i><i class="bi bi-star rating-star" data-val="5"></i></div>
+                        <p id="rating-msg" class="rating-msg"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer-simple">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+            <p>© 2025 ALALU Recetas.</p>
+            <a href="hamburguesa.html" class="back-home"><i class="bi bi-arrow-left me-2"></i>Volver al inicio</a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.rating-star').forEach(s=>s.addEventListener('click',function(){const v=parseInt(this.dataset.val);document.querySelectorAll('.rating-star').forEach((x,i)=>{x.classList.toggle('bi-star-fill',i<v);x.classList.toggle('bi-star',i>=v);});document.getElementById('rating-msg').textContent=['😐','😊','😄','🙌','🌟'][v-1]+' ¡Gracias!';}));
+        window.addEventListener('scroll',()=>{document.querySelector('.navbar-wrapper').classList.toggle('scrolled',window.scrollY>50);});
+    </script>
+</body>
+</html>

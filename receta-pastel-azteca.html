@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastel Azteca Tradicional – ALALU Recetas</title>
+    <meta name="description" content="Aprende a preparar el auténtico Pastel Azteca en capas con tortillas, pollo, chile poblano y queso gratinado. Receta paso a paso de ALALU.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="receta.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar-wrapper">
+        <nav class="container-fluid px-4 py-2 d-flex align-items-center justify-content-between">
+            <a href="hamburguesa.html">
+                <img src="./img/Logo recetas.png" alt="Logo ALALU" class="header-logo">
+            </a>
+            <div class="d-flex gap-2 align-items-center nav-links">
+                <a href="hamburguesa.html" class="nav-btn">Inicio</a>
+                <a href="hamburguesa.html#recetas" class="nav-btn">Recetas</a>
+                <a href="hamburguesa.html#categorias" class="nav-btn">Categorías</a>
+                <a href="hamburguesa.html#tips" class="nav-btn">Tips del Chef</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO / PORTADA -->
+    <section class="recipe-hero">
+        <div class="recipe-hero-img-wrap">
+            <img src="./img/ConvertOut-Resized-Pastel_Azteca_1_Klein_Sep24_2000x.webp" alt="Pastel Azteca Tradicional" class="recipe-hero-img">
+            <div class="recipe-hero-overlay"></div>
+        </div>
+        <div class="recipe-hero-content container">
+            <div class="breadcrumb-nav">
+                <a href="hamburguesa.html">Inicio</a>
+                <i class="bi bi-chevron-right"></i>
+                <a href="hamburguesa.html#categorias">Mexicana</a>
+                <i class="bi bi-chevron-right"></i>
+                <span>Pastel Azteca</span>
+            </div>
+            <span class="cat-pill">🌮 Mexicana</span>
+            <h1 class="recipe-hero-title">Pastel Azteca Tradicional</h1>
+            <p class="recipe-hero-sub">El clásico pastel de tortillas en capas con pollo, chile poblano, crema y queso fundido. Un sabor que te transporta directo a la cocina mexicana de siempre.</p>
+            <div class="recipe-hero-meta">
+                <div class="meta-pill"><i class="bi bi-clock"></i> 60 min total</div>
+                <div class="meta-pill"><i class="bi bi-fire"></i> 20 min prep</div>
+                <div class="meta-pill"><i class="bi bi-people"></i> 6 porciones</div>
+                <div class="meta-pill difficulty-medium"><i class="bi bi-bar-chart"></i> Dificultad Media</div>
+                <div class="meta-pill"><i class="bi bi-star-fill text-warning"></i> 5.0 (142 reseñas)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container recipe-main">
+        <div class="row g-5">
+
+            <!-- COLUMNA IZQUIERDA: Receta -->
+            <div class="col-12 col-lg-8">
+
+                <!-- Descripción -->
+                <section class="recipe-section">
+                    <h2 class="section-heading">Acerca de esta receta</h2>
+                    <p>El <strong>Pastel Azteca</strong> es uno de los platillos más representativos de la cocina mexicana contemporánea. Se elabora superponiendo tortillas de maíz con capas de pollo deshebrado, salsa de chile poblano, crema ácida y queso Oaxaca derretido. Su nombre evoca las construcciones piramidales aztecas, reflejando sus múltiples capas llenas de sabor. Es el plato perfecto para una comida familiar o una cena especial.</p>
+                </section>
+
+                <!-- Ingredientes -->
+                <section class="recipe-section">
+                    <h2 class="section-heading"><i class="bi bi-basket2 me-2"></i>Ingredientes</h2>
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6">
+                            <div class="ingredient-group">
+                                <h5 class="ingredient-group-title">Base del Pastel</h5>
+                                <ul class="ingredient-list">
+                                    <li><span class="qty">12</span> tortillas de maíz</li>
+                                    <li><span class="qty">2 pechugas</span> de pollo cocidas y deshebradas</li>
+                                    <li><span class="qty">4 chiles</span> poblanos asados y pelados</li>
+                                    <li><span class="qty">250 g</span> queso Oaxaca o Chihuahua</li>
+                                    <li><span class="qty">1 taza</span> crema ácida mexicana</li>
+                                    <li><span class="qty">1 lata (400 g)</span> crema de elote (opcional)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="ingredient-group">
+                                <h5 class="ingredient-group-title">Salsa Verde</h5>
+                                <ul class="ingredient-list">
+                                    <li><span class="qty">500 g</span> tomates verdes (tomatillos)</li>
+                                    <li><span class="qty">2 dientes</span> de ajo</li>
+                                    <li><span class="qty">¼ de cebolla</span> blanca</li>
+                                    <li><span class="qty">1 chile</span> serrano (al gusto)</li>
+                                    <li><span class="qty">1 manojo</span> de cilantro</li>
+                                    <li><span class="qty">Sal y pimienta</span> al gusto</li>
+                                    <li><span class="qty">2 cdas</span> aceite vegetal</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pasos -->
+                <section class="recipe-section">
+                    <h2 class="section-heading"><i class="bi bi-list-ol me-2"></i>Preparación Paso a Paso</h2>
+
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-body">
+                            <h4>Prepara la salsa verde</h4>
+                            <p>Hierve los tomates verdes con el ajo, cebolla y chile serrano por 10 minutos hasta que estén suaves. Licúa junto con el cilantro, sal y pimienta. En una sartén caliente con aceite, fríe la salsa por 5 minutos a fuego medio hasta que cambie de color y espese ligeramente.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-body">
+                            <h4>Asa y pela los chiles poblanos</h4>
+                            <p>Coloca los chiles directamente sobre la flama del gas o en el comal hasta que la piel se ennegrezca por completo. Mételos en una bolsa de plástico por 10 minutos para sudar. Retira la piel, las semillas y las venas. Córtalos en rajas (tiras).</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-body">
+                            <h4>Calienta las tortillas</h4>
+                            <p>Pasa las tortillas por un comal caliente con unas gotas de aceite, solo 30 segundos por lado. Esto evita que se rompan al armar las capas. También puedes pasarlas por la salsa verde ligeramente.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div class="step-body">
+                            <h4>Arma el pastel en capas</h4>
+                            <p>En un refractario engrasado (aprox. 25×30 cm) coloca una capa de salsa verde en el fondo. Agrega tortillas cubriendo la base. Encima: pollo deshebrado, rajas de chile poblano, crema ácida, salsa verde y queso rallado. Repite 3-4 capas. Termina con tortillas, salsa y abundante queso encima.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">5</div>
+                        <div class="step-body">
+                            <h4>Gratina en el horno</h4>
+                            <p>Precalienta el horno a 180°C (350°F). Cubre el refractario con papel aluminio y hornea 20 minutos. Retira el aluminio y hornea 10-15 minutos más hasta que el queso esté dorado y burbujeante. Deja reposar 5 minutos antes de servir.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card highlight-step">
+                        <div class="step-number">✓</div>
+                        <div class="step-body">
+                            <h4>¡Listo para servir!</h4>
+                            <p>Sirve porciones generosas con crema extra, aguacate en rebanadas y arroz rojo. Este pastel se congela perfectamente hasta 2 semanas.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Video Tip -->
+                <section class="recipe-section">
+                    <div class="tip-box">
+                        <div class="tip-box-icon">👨‍🍳</div>
+                        <div>
+                            <h5>Tip del Chef ALALU</h5>
+                            <p>Para un pastel más cremoso, mezcla la crema ácida directamente con la salsa verde antes de armar las capas. También puedes agregar elote desgranado y champiñones salteados para una versión más completa.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Información nutricional -->
+                <section class="recipe-section">
+                    <h2 class="section-heading"><i class="bi bi-pie-chart me-2"></i>Información Nutricional</h2>
+                    <p class="text-muted mb-3"><small>Por porción (aproximado)</small></p>
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <span class="nut-value">420</span>
+                            <span class="nut-label">Calorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nut-value">28g</span>
+                            <span class="nut-label">Proteína</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nut-value">35g</span>
+                            <span class="nut-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nut-value">18g</span>
+                            <span class="nut-label">Grasa</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nut-value">3g</span>
+                            <span class="nut-label">Fibra</span>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- COLUMNA DERECHA: Info lateral -->
+            <div class="col-12 col-lg-4">
+                <div class="sticky-sidebar">
+
+                    <!-- Resumen rápido -->
+                    <div class="sidebar-card">
+                        <h4 class="sidebar-title">Resumen Rápido</h4>
+                        <ul class="summary-list">
+                            <li><i class="bi bi-clock text-warning"></i> <span>Tiempo total</span> <strong>60 min</strong></li>
+                            <li><i class="bi bi-stopwatch text-warning"></i> <span>Preparación</span> <strong>20 min</strong></li>
+                            <li><i class="bi bi-thermometer-half text-warning"></i> <span>Cocción</span> <strong>40 min</strong></li>
+                            <li><i class="bi bi-people text-warning"></i> <span>Porciones</span> <strong>6 personas</strong></li>
+                            <li><i class="bi bi-bar-chart text-warning"></i> <span>Dificultad</span> <strong>Media</strong></li>
+                            <li><i class="bi bi-tag text-warning"></i> <span>Calorías</span> <strong>420 kcal/porción</strong></li>
+                        </ul>
+                    </div>
+
+                    <!-- Ajustar porciones -->
+                    <div class="sidebar-card">
+                        <h4 class="sidebar-title">Ajustar Porciones</h4>
+                        <div class="portion-adjuster">
+                            <button class="portion-btn" onclick="changePortion(-1)">−</button>
+                            <span id="portion-count">6</span> personas
+                            <button class="portion-btn" onclick="changePortion(1)">+</button>
+                        </div>
+                        <p class="text-muted" style="font-size:0.8rem; margin-top:8px;">Los ingredientes se ajustan automáticamente.</p>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="sidebar-card">
+                        <h4 class="sidebar-title">Etiquetas</h4>
+                        <div class="tags-wrap">
+                            <span class="tag">🌮 Mexicana</span>
+                            <span class="tag">🍗 Pollo</span>
+                            <span class="tag">🌶️ Chile</span>
+                            <span class="tag">🧀 Gratinado</span>
+                            <span class="tag">🏠 Casero</span>
+                            <span class="tag">🎉 Especial</span>
+                        </div>
+                    </div>
+
+                    <!-- Rating -->
+                    <div class="sidebar-card">
+                        <h4 class="sidebar-title">¿Te gustó esta receta?</h4>
+                        <div class="rating-stars" id="user-rating">
+                            <i class="bi bi-star rating-star" data-val="1"></i>
+                            <i class="bi bi-star rating-star" data-val="2"></i>
+                            <i class="bi bi-star rating-star" data-val="3"></i>
+                            <i class="bi bi-star rating-star" data-val="4"></i>
+                            <i class="bi bi-star rating-star" data-val="5"></i>
+                        </div>
+                        <p id="rating-msg" class="rating-msg"></p>
+                    </div>
+
+                    <!-- Compartir -->
+                    <div class="sidebar-card">
+                        <h4 class="sidebar-title">Compartir</h4>
+                        <div class="share-btns">
+                            <button class="share-btn share-wa" onclick="compartir('whatsapp')"><i class="bi bi-whatsapp"></i> WhatsApp</button>
+                            <button class="share-btn share-fb" onclick="compartir('facebook')"><i class="bi bi-facebook"></i> Facebook</button>
+                            <button class="share-btn share-copy" onclick="copiarLink()"><i class="bi bi-link-45deg"></i> Copiar link</button>
+                        </div>
+                        <p id="copy-msg" class="copy-msg"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RECETAS RELACIONADAS -->
+        <section class="recipe-section mt-5">
+            <h2 class="section-heading">También te puede gustar</h2>
+            <div class="row g-4">
+                <div class="col-12 col-sm-6 col-md-4">
+                    <a href="receta-hamburguesa.html" class="related-card">
+                        <div class="related-img-wrap">
+                            <img src="./img/61c65ad5-7e93-44d8-9559-f459c480df1d.webp" alt="Hamburguesa Clásica">
+                        </div>
+                        <div class="related-body">
+                            <span class="related-cat">🍔 Hamburguesas</span>
+                            <h5>Hamburguesa Clásica ALALU</h5>
+                            <div class="related-meta"><i class="bi bi-clock"></i> 30 min &nbsp;•&nbsp; Fácil</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <a href="receta-pozole.html" class="related-card">
+                        <div class="related-img-wrap related-placeholder">🍲</div>
+                        <div class="related-body">
+                            <span class="related-cat">🍲 Sopas</span>
+                            <h5>Pozole Rojo Tradicional</h5>
+                            <div class="related-meta"><i class="bi bi-clock"></i> 90 min &nbsp;•&nbsp; Medio</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <a href="receta-ensalada-cesar.html" class="related-card">
+                        <div class="related-img-wrap related-placeholder">🥗</div>
+                        <div class="related-body">
+                            <span class="related-cat">🥗 Ensaladas</span>
+                            <h5>Ensalada César con Crutones</h5>
+                            <div class="related-meta"><i class="bi bi-clock"></i> 15 min &nbsp;•&nbsp; Fácil</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER SIMPLE -->
+    <footer class="footer-simple">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+            <p>© 2025 ALALU Recetas. Hecho con ❤️ en México.</p>
+            <a href="hamburguesa.html" class="back-home"><i class="bi bi-arrow-left me-2"></i>Volver al inicio</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Rating estrellas
+        const stars = document.querySelectorAll('.rating-star');
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const val = parseInt(this.dataset.val);
+                stars.forEach((s, i) => {
+                    s.classList.toggle('bi-star-fill', i < val);
+                    s.classList.toggle('bi-star', i >= val);
+                });
+                const msgs = ['😐 Gracias por calificar', '😊 ¡Gracias!', '😄 ¡Buena receta!', '🙌 ¡Nos alegra que te gustó!', '🌟 ¡Perfecto! Gracias por tu reseña'];
+                document.getElementById('rating-msg').textContent = msgs[val - 1];
+            });
+        });
+
+        // Ajustar porciones
+        function changePortion(delta) {
+            const el = document.getElementById('portion-count');
+            let val = parseInt(el.textContent) + delta;
+            if (val < 1) val = 1;
+            if (val > 20) val = 20;
+            el.textContent = val;
+        }
+
+        // Compartir
+        function compartir(red) {
+            const url = encodeURIComponent(window.location.href);
+            const texto = encodeURIComponent('¡Mira esta increíble receta de Pastel Azteca de ALALU! 🍽️');
+            if (red === 'whatsapp') window.open(`https://wa.me/?text=${texto}%20${url}`);
+            if (red === 'facebook') window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`);
+        }
+        function copiarLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                document.getElementById('copy-msg').textContent = '✅ ¡Link copiado al portapapeles!';
+                setTimeout(() => document.getElementById('copy-msg').textContent = '', 3000);
+            });
+        }
+
+        // Scroll navbar
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar-wrapper').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>
